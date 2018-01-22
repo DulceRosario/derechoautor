@@ -14,7 +14,7 @@
   <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-    <title>Lineamientos generales de programación &#8212; documentación de Software - 0</title>
+    <title>Lineamientos de programación &#8212; documentación de Software - 0</title>
     <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -73,7 +73,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="derechoAutor.html">¿Qué es el Derecho de Autor?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="implementacion.html">Procedimiento para el registro de Software en el CCA</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Lineamientos generales de programación</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lineamientos de programación</a></li>
 </ul>
 
     
@@ -101,25 +101,75 @@
             <ol class="breadcrumb">
               <li><a href="index.html">Docs</a></li>
               
-              <li>Lineamientos generales de programación</li>
+              <li>Lineamientos de programación</li>
             </ol>
           </div>
           
           <div class="document clearer body">
             
-  <div class="section" id="lineamientos-generales-de-programacion">
-<h1>Lineamientos generales de programación<a class="headerlink" href="#lineamientos-generales-de-programacion" title="Enlazar permanentemente con este título">¶</a></h1>
-<p>1.- Elegir una de las convenciones de nomenclatura para la definir los identificadores</p>
+  <div class="section" id="lineamientos-de-programacion">
+<h1>Lineamientos de programación<a class="headerlink" href="#lineamientos-de-programacion" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Adicionalmente a estos lineamientos de programación, les sugerimos revisar a conciencia los siguientes <a class="reference external" href="https://en.wikipedia.org/wiki/Category:Programming_principles">principios
+de programacion</a>.</p>
+<p>1.- Elegir una de las convenciones de nomenclatura para la definir los identificadore</p>
 <blockquote>
 <div><dl class="docutils">
 <dt>Estilo Pascal (PascalCase)</dt>
-<dd>La primera letra del identificador y la primera letra de las siguientes palabras concatenadas están en mayúsculas.</dd>
+<dd><p class="first"><strong>Variables y funciones</strong>. La primera letra debe ir en <em>minúscula</em> y, en nombres de variables compuestos, la primer letra de cada
+palabra adicional debe ir con mayúscula. Ejemplos (se sugiere siempre usar nombres en inglés): sigularMatrix, joinsArrays, plotResults,
+associateProfessor, blackCar, etc.</p>
+<p class="last"><strong>Clases</strong>. La primera letra debe ir en <em>mayúscula</em> ir con y, en nombres de clases compuestas, la primer letra de cada
+palabra adicional debe ir con mayúscula. Ejemplos (se sugiere siempre usar nombres en inglés): ForecastModel, Hurricane,
+Employee, etc.</p>
+</dd>
 </dl>
 </div></blockquote>
-<p>2.-Mantener una indentación coherente</p>
-<p>3.- Evitar comentarios obvios</p>
+<p>2.- Mantener una indentación uniforme. Para unificar la identación en el código generado en el Centro de Ciencias de la Atmósfera se sugiere:</p>
+<blockquote>
+<div><p>1.- Utilizar espacios en vez de tabuladores (tabs). Cada IDE se puede configurar para que al usar tabuladores se inserten espacios  de forma automática.</p>
+<p>2.- Utilizar una identación a 4 espacios en todos los lenguages de programación.</p>
+</div></blockquote>
+<p>3.- Comentar funciones, clases y subsecciones del código.</p>
+<blockquote>
+<div>Ejemplos de comentarios en Python <a class="reference external" href="https://www.python.org/dev/peps/pep-0257/">link</a> :</div></blockquote>
+<ul class="simple">
+<li>Funciones</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">function</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="s2">&quot;&quot;</span><span class="n">Here</span> <span class="n">it</span> <span class="n">should</span> <span class="n">be</span> <span class="n">a</span> <span class="n">summary</span> <span class="n">of</span> <span class="n">the</span> <span class="n">function</span>
+
+    <span class="n">Args</span><span class="p">:</span>
+        <span class="n">a</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">The</span> <span class="n">first</span> <span class="n">parameter</span><span class="o">.</span>
+        <span class="n">b</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">The</span> <span class="n">second</span> <span class="n">parameter</span><span class="o">.</span>
+
+    <span class="n">Returns</span><span class="p">:</span>
+        <span class="nb">bool</span><span class="p">:</span> <span class="n">The</span> <span class="k">return</span> <span class="n">value</span><span class="o">.</span> <span class="bp">True</span> <span class="k">for</span> <span class="n">success</span><span class="p">,</span> <span class="bp">False</span> <span class="n">otherwise</span><span class="o">.</span>
+    <span class="s2">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Secciones</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># Computes the convolution between A and B</span>
+<span class="k">for</span> <span class="n">rows</span> <span class="ow">in</span> <span class="n">A</span><span class="p">:</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<p>Ejemplos de comentarios en Matlab <a class="reference external" href="https://la.mathworks.com/help/matlab/matlab_prog/add-help-for-your-program.html">link</a> :</p>
+<ul class="simple">
+<li>Funciones</li>
+</ul>
+<div class="highlight-matlab"><div class="highlight"><pre><span></span><span class="k">function</span><span class="w"> </span>c <span class="p">=</span><span class="w"> </span><span class="nf">addme</span><span class="p">(</span>a,b<span class="p">)</span><span class="w"></span>
+<span class="c">% ADDME  Add two values together.</span>
+<span class="c">%   C = ADDME(A) adds A to itself.</span>
+<span class="c">%   C = ADDME(A,B) adds A and B together.</span>
+<span class="c">%%   See al so SUM, PLUS.</span>
+</pre></div>
+</div>
 <p>4.- Evitar los anidamientos excesivos</p>
-<p>5.- Mantener nombres consistentes</p>
+<p>5.- Mantener nombres consistentes. Es mejor nombres largos que expliquen la variable que sólo letras que no dan
+información de lo que contiene la variable.</p>
+<p>6.- Evitar siempre que sea posible el uso de variables globales</p>
 </div>
 
 
